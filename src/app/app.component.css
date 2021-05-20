@@ -1,13 +1,3 @@
-p {
-  font-family: Lato;
-}
-
-.layout {
-  display: flex;
-  justify-content: space-around;
-}
-.no-expression {
-  font-size: 14px;
-  color: gray;
-  margin-top: 50%;
+.navbar {
+  border-radius: 0;
 }

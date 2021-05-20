@@ -1,13 +1,19 @@
-<h2>MathML parsing demo</h2>
-<br>
-<section class="layout">
-  <section>
-  <textarea [(ngModel)]="mathml" name="mathml" id="mathml" cols="30" rows="20" placeholder="paste your mathml expression here"></textarea>
-  </section>
-  <section>
-    <p *ngIf="mathml;else noExpression" [appMath]="mathml"> </p>
-    <ng-template #noExpression>
-      <div class="no-expression">Expression unavailable</div>
-    </ng-template>
-  </section>
-</section>
+<nav class="navbar navbar-inverse">
+  <div class="navbar-header navbar-brand">MathML Parsing Demo</div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="text-center"><strong>MathML Code:</strong></div>
+      <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="mathml"></ngx-monaco-editor>
+    </div>
+    <div class="col-sm-6">
+      <div class="text-center"><strong>MathML Preview:</strong></div>
+      <p *ngIf="mathml;else noExpression" [appMath]="mathml"> </p>
+      <ng-template #noExpression>
+        <div class="text-danger">Expression unavailable</div>
+      </ng-template>
+    </div>
+  </div>
+</div>
