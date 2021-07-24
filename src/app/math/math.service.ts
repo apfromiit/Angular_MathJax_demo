@@ -38,7 +38,7 @@ export class MathService {
     this.signal = new ReplaySubject<boolean>();
     void this.registerMathJaxAsync(this.mathJax)
       .then(() => this.signal.next())
-      .catch(error => {
+      .catch(Error => {
          void this.registerMathJaxAsync(this.mathJaxFallback)
           .then(() => this.signal.next())
           .catch((error) => console.log(error));

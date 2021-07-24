@@ -20,7 +20,7 @@ export class MathDirective implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes && changes['appMath'] && changes['appMath'].currentValue) {
+    if (changes && changes['appMath'] && changes['appMath'].currentValue) {
       this.render();
     }
   }
